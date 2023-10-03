@@ -19,5 +19,7 @@ conn.connect((err) => {
     conn.query(sql, (err, res) => {
         if(err) throw err;
         console.log('record addded to user table!', res);
+        // to get the ID of the inserted column
+        console.log('Insert ID', res.insertId);
     });
 });
